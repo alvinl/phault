@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  div.container(ng-controller='#{controller}')
+    div.row
+      div.col-md-8.col-md-offset-2
+        h1.title= pageTitle
+        hr
+      div.col-md-8.col-md-offset-2
+        div.latestErrors-container(ng-repeat='error in latestErrors')
+          h3(ng-cloak) {{ error.method }} {{ error.path }}
+          p(ng-cloak)
+            b Type: 
+            | {{ error.errName }}
+          p(ng-cloak)
+            b Message: 
+            | {{ error.message }}
+          p(ng-cloak)
+            b Timestamp: 
+            | {{ error.timeStamp | date:'short' }}
+          p(ng-cloak)
+            b Log ID: 
+            | {{ error._id }}
+          p(ng-cloak)
+            b User: 
+            kbd 
+              a(href='#/u/{{ error.user }}') {{ error.user }}
+          pre(ng-cloak) {{ error.stack }}
+          hr

@@ -1,0 +1,1 @@
+var Phault=angular.module("Phault",[]);Phault.controller("IndexCtrl",["$scope","$http",function(t,r){r.get("/api/errors").success(function(r){t.latestErrors=r})}]),Phault.controller("UserCtrl",["$scope","$http","$window",function(t,r,e){var o=e.location.pathname.replace("/user/","");r.get("/api/user/"+o).success(function(r){t.latestErrors=r})}]);

@@ -1,0 +1,47 @@
+
+body {
+
+  background-color: #FAFAFA;
+
+}
+
+pre {
+
+  background-color: #222;
+  color: #DADADA;
+  overflow: scroll;
+  word-wrap: normal;
+
+}
+
+hr {
+
+  margin-bottom: 0;
+
+}
+
+kbd a {
+
+  text-decoration: none;
+  color: #fff;
+
+}
+
+kbd a:hover {
+
+  text-decoration: none;
+  color: #ccc;
+
+}
+
+.title {
+
+  margin-top: 5%;
+
+}
+
+.latestErrors-container {
+
+  margin-top: 5%;
+
+}
